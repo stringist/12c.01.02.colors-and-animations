@@ -80,6 +80,7 @@ p {
     /* font-family: "Poppins", sans-serif; */
     line-height: 1.5rem;
     margin-bottom: 2rem;
+    font-weight: 300;
 }
 
 a {
@@ -280,12 +281,16 @@ header button {
     padding: 2rem;
     align-items: center;
     justify-content: space-around;
-    background-color: var(--color-primary1-darker);
+    background-color: var(--color-primary1);
 }
 
 #request div {
     width: 50vw;
     min-width: 450px;
+}
+
+#request>div>button:nth-child(4) {
+    background-color: var(--color-primary2-darker);
 }
 
 
