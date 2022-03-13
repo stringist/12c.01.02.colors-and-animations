@@ -115,7 +115,7 @@ button {
 }
 
 .dark_button {
-    background-color: #000;
+    background-color: #333;
 }
 
 input[type="text"] {
@@ -388,7 +388,7 @@ footer section div {
         color: var(--color-primary2-darker);
     }
     .dark_button {
-        background-color: #000;
+        background-color: #333;
     }
     input[type="text"] {
         box-sizing: border-box;
@@ -407,7 +407,7 @@ footer section div {
         padding: 1rem;
         justify-content: space-between;
         align-items: center;
-        background-color: #000;
+        background-color: rgb(9, 9, 9);
         border-bottom: solid 1px var(--color-secondary-darker);
     }
     nav a {
@@ -494,7 +494,7 @@ footer section div {
         padding: 2rem;
         align-items: center;
         justify-content: space-around;
-        background-color: var(--color-primary2-darker);
+        background-color: rgb(23, 23, 23);
     }
     .highlight div {
         width: 80vw;
@@ -505,7 +505,8 @@ footer section div {
         color: var(--color-secondary1);
     }
     .dark {
-        background-color: var(--color-primary2-darker);
+        background-color: rgb(23, 23, 23);
+        ;
     }
     .dark h2 {
         color: #eee;
