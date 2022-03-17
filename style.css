@@ -276,6 +276,10 @@ header button {
     color: var(--color-primary2-darker);
 }
 
+#product h3 {
+    color: var(--color-primary2-darker);
+}
+
 .product_graphics {
     width: 15vw;
     height: 15vw;
@@ -379,226 +383,112 @@ footer section div {
 }
 
 @media (prefers-color-scheme: dark) {
-    body {
-        font-family: var(--body);
-        font-size: 18px;
-    }
-    h1,
-    h2,
-    h3 {
-        font-family: var(--display);
-        margin-bottom: 1rem;
-    }
-    h1 {
-        font-size: 3.052rem;
+    .dark-mode h1 {
         color: var(--color-primary1-darker);
-        line-height: 3rem;
-        margin-bottom: 2rem;
     }
-    h2 {
-        font-size: 1.953rem;
-        line-height: 2.5rem;
-    }
-    h3 {
-        font-size: 1.25rem;
-        line-height: 1.5rem;
-        /* font-family: "Poppins", sans-serif; */
-    }
-    p {
+    .dark-mode p {
         color: var(--color-primary1);
-        /* font-family: "Poppins", sans-serif; */
-        line-height: 1.5rem;
-        margin-bottom: 2rem;
-        font-weight: 300;
     }
-    a {
-        text-decoration: none;
+    .dark-mode a {
         color: var(--color-primary1-darker);
     }
-    a:hover {
+    .dark-mode a:hover {
         color: var(--color-secondary1);
-        text-decoration: underline;
     }
     /* UI Elements */
-    button {
-        display: inline-block;
-        height: 3rem;
-        padding: 1rem 2rem;
-        border: none;
-        font-size: 1rem;
-        text-align: center;
-        text-decoration: none;
+    .dark-mode button {
         background-color: #222;
         color: #eee;
     }
-    .light_button {
+    .dark-mode .light_button {
         background-color: var(--color-secondary1);
         color: var(--color-primary2-darker);
     }
-    .dark_button {
+    .dark-mode .dark_button {
         background-color: #333;
     }
-    input[type="text"] {
-        box-sizing: border-box;
-        width: 250px;
-        height: 3rem;
-        padding: 1rem 1rem;
-        font-size: 1rem;
-        text-align: left;
+    .dark-mode input[type="text"] {
         background-color: rgb(41, 41, 41);
         border-color: var(--color-secondary-darker);
         color: var(--color-primary1);
     }
     /* Menu */
-    nav {
-        display: flex;
-        padding: 1rem;
-        justify-content: space-between;
-        align-items: center;
+    .dark-mode nav {
         background-color: rgb(9, 9, 9);
         border-bottom: solid 1px var(--color-secondary-darker);
     }
-    nav a {
+    .dark-mode nav a {
         color: white;
         text-decoration: none;
     }
-    nav a.logo {
-        /* font-family: "Noto Serif Display", serif; */
-        font-size: 1.25rem;
-    }
-    nav li {
-        display: inline-block;
-        margin: 0px 1rem;
-    }
     /* Header */
-    header {
-        display: flex;
-        min-height: 80vh;
-        padding: 5rem;
-        align-items: center;
-        justify-content: space-around;
-        flex-wrap: wrap;
+    .dark-mode header {
         background-color: #000;
     }
-    header h1 {
+    .dark-mode header h1 {
         color: var(--color-secondary1);
     }
-    header p {
+    .dark-mode header p {
         color: var(--color-primary1);
     }
-    header button {
+    .dark-mode header button {
         color: #000;
         background-color: var(--color-accent2);
-        margin-bottom: 5rem;
     }
-    .header_text {
-        /* color: var(--color-primary2); */
-        width: 30vw;
-        min-width: 300px;
-    }
-    .header_graphics {
-        width: 30vw;
-        height: 30vw;
-        min-width: 300px;
-        min-height: 300px;
-        border-radius: 300px;
+    .dark-mode .header_graphics {
         background-color: var(--color-secondary-darker);
     }
     /* product section */
-    #product {
-        padding: 2rem;
+    .dark-mode #product {
         background-color: #000;
     }
-    #product h3 {
-        font-size: 1.953rem;
-        line-height: 2.5rem;
-    }
-    #product article {
-        display: flex;
-        min-height: 50vh;
-        padding: 2rem;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-around;
-    }
-    .product_text {
-        width: 50vw;
-        min-width: 300px;
+    .dark-mode .product_text {
         color: var(--color-primary1-darker);
     }
-    .product_graphics {
-        width: 15vw;
-        height: 15vw;
-        min-width: 150px;
-        min-height: 150px;
-        margin: 3rem;
-        background-color: var(--color-secondary-darker);
-        border-radius: 300px;
-    }
-    /* highlight sections */
-    .highlight {
-        display: flex;
-        min-height: 70vh;
-        padding: 2rem;
-        align-items: center;
-        justify-content: space-around;
-        background-color: rgb(23, 23, 23);
-    }
-    .highlight div {
-        width: 80vw;
-    }
-    .highlight div h2 {
-        font-size: 3.052rem;
-        line-height: 4rem;
+    .dark-mode #product h3 {
         color: var(--color-secondary1);
     }
-    .dark {
-        background-color: rgb(23, 23, 23);
-        ;
+    .dark-mode .product_graphics {
+        background-color: var(--color-secondary-darker);
     }
-    .dark h2 {
+    /* highlight sections */
+    .dark-mode .highlight {
+        background-color: rgb(23, 23, 23);
+    }
+    .dark-mode .highlight div h2 {
+        color: var(--color-secondary1);
+    }
+    .dark-mode .dark {
+        background-color: rgb(23, 23, 23);
+    }
+    .dark-mode .dark h2 {
         color: #eee;
     }
-    #solution div h2 {
+    .dark-mode #solution div h2 {
         color: var(--color-secondary1);
     }
     /* request section */
-    #request {
+    .dark-mode #request {
         background-color: #000;
         border-bottom: solid 1px var(--color-secondary-darker);
     }
-    #request div h2 {
+    .dark-mode #request div h2 {
         color: var(--color-secondary1)
     }
-    #request>div>button:nth-child(4) {
+    .dark-mode #request>div>button:nth-child(4) {
         color: #000;
         background-color: var(--color-accent2);
     }
     /* Footer */
-    footer {
-        display: flex;
-        padding: 5vh 2rem;
-        align-items: top;
-        flex-wrap: wrap;
-        justify-content: space-between;
+    .dark-mode footer {
         background-color: #000;
         color: #ddd;
     }
-    footer h2,
-    footer h3 {
+    .dark-mode footer h2,
+    .dark-mode footer h3 {
         color: #eee;
     }
-    footer a {
+    .dark-mode footer a {
         color: #ddd;
-    }
-    footer section.left {
-        display: flex;
-        max-width: 50vw;
-        align-items: top;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    footer section div {
-        margin: 0px 1rem 1rem 1rem;
     }
 }

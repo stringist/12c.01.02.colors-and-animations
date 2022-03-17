@@ -1,38 +1,32 @@
 "use strict";
 
-// const changeThemeToDark = () => {
-//     document.documentElement.setAttribute("data-theme", "dark"); //set theme to light
-// }
+window.addEventListener("load", readTheme);
 
-// const changeThemeToLight = () => {
-//     document.documentElement.setAttribute("data-theme", "light"); //set theme to light
-// }
-
-document.querySelector("#toggle_button").addEventListener("click", changeTheme);
-
-function changeTheme() {
+function readTheme() {
     if (window.matchMedia("(prefers-color-scheme: dark)")) {
-        document.documentElement.setAttribute("data-theme", "light");
-        console.log("change theme to light")
-    }
-    if (window.matchMedia("(prefers-color-scheme: light)")) {
-        document.documentElement.setAttribute("data-theme", "dark");
-        console.log("change theme to dark")
+        document.documentElement.classList.add("dark-mode");
     }
 }
+const button = document.querySelector("#toggle_button");
 
-// function toggleDarkMode() {
-//     if (document.documentElement.classList.contains("light")) {
-//         document.documentElement.classList.remove("light")
-//         document.documentElement.classList.add("dark")
-//     } else if (document.documentElement.classList.contains("dark")) {
-//         document.documentElement.classList.remove("dark")
-//         document.documentElement.classList.add("light")
-//     } else {
-//         if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-//             document.documentElement.classList.add("light")
-//         } else {
-//             document.documentElement.classList.add("dark")
-//         }
-//     }
-// }
+const useDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+toggleDarkMode(useDark.matches);
+
+function toggleDarkMode(state) {
+    console.log("Dark mode activated");
+    console.log(state);
+
+    document.documentElement.classList.toggle("dark-mode", state);
+}
+
+useDark.addListener((evt) => toggleDarkMode(evt.matches));
+
+button.addEventListener("click", () => {
+    document.documentElement.classList.toggle("dark-mode");
+    console.log("overridden");
+});
+
+if (useDark.matches) {
+    button.checked = true;
+}
