@@ -1,12 +1,12 @@
 "use strict";
 
-window.addEventListener("load", readTheme);
+// window.addEventListener("load", readTheme);
 
-function readTheme() {
-    if (window.matchMedia("(prefers-color-scheme: dark)")) {
-        document.documentElement.classList.add("dark-mode");
-    }
-}
+// function readTheme() {
+//     if (window.matchMedia("(prefers-color-scheme: dark)")) {
+//         document.documentElement.classList.add("dark-mode");
+//     }
+// }
 const button = document.querySelector("#toggle_button");
 
 const useDark = window.matchMedia("(prefers-color-scheme: dark)");
